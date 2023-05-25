@@ -33,21 +33,23 @@ h1 {
 .container {
   /*  position: relative; */
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .container .card,
-.container .card-green {
+.container .card-green,
+.container .card-blue {
   position: relative;
   width: 16rem;
   height: 25rem;
-  background-color: #232323;
+  background: #232323;
   border-radius: 1.2rem;
   overflow: hidden;
 }
 
 .container .card:before,
-.container .card-green:before {
+.container .card-green:before,
+.container .card-blue:before {
   content: "";
   position: absolute;
   top: 0;
@@ -56,19 +58,25 @@ h1 {
   height: 100%;
   background: #db3f35;
   clip-path: circle(135px at 90% 20%);
-  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .container .card-green:before {
-  background-color: #5bddc2;
+  background: #5bddc2;
+}
+
+.container .card-blue:before {
+  background: #073476;
 }
 
 .container .card:hover:before,
-.container .card-green:hover:before {
+.container .card-green:hover:before,
+.container .card-blue:hover:before {
   clip-path: circle(300px at 80% -20%);
 }
 
 .container .card:after,
-.container .card-green:after {
+.container .card-green:after,
+.container .card-blue:after {
   content: "New";
   position: absolute;
   top: 40%;
@@ -80,25 +88,36 @@ h1 {
 }
 
 .container .card .imgBx,
-.container .card-green .imgBx {
+.container .card-green .imgBx,
+.container .card-blue .imgBx {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10000;
   width: 100%;
   height: 13.7rem;
-  /* transition: 0, 5s; */
+  transition: 1s;
+}
+
+.container .card-blue .imgBx {
+  top: 38%;
 }
 
 .container .card:hover .imgBx,
-.container .card-green:hover .imgBx {
+.container .card-green:hover .imgBx,
+.container .card-blue:hover .imgBx {
   top: 0;
   transform: translateY(0);
   transition: 1s;
 }
 
+.container .card-blue:hover .imgBx {
+  top: -12%;
+}
+
 .container .card .imgBx img,
-.container .card-green .imgBx img {
+.container .card-green .imgBx img,
+.container .card-blue .imgBx img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -106,39 +125,44 @@ h1 {
 }
 
 .container .card .contentBx,
-.container .card-green .contentBx {
+.container .card-green .contentBx,
+.container .card-blue .contentBx {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 7.5rem;
   text-align: center;
-  transition: 1s;
+  transition: 0.5s;
   z-index: 10;
 }
 .container .card:hover .contentBx,
-.container .card-green:hover .contentBx {
-  height: 210px;
+.container .card-green:hover .contentBx,
+.container .card-blue:hover .contentBx {
+  height: 13.5rem;
 }
 
 .container .card .contentBx h2,
-.container .card-green .contentBx h2 {
+.container .card-green .contentBx h2,
+.container .card-blue .contentBx h2 {
   position: relative;
+  height: 7.5rem;
   font-weight: 600;
   letter-spacing: 1px;
   color: #fff;
 }
 
 .container .card .contentBx .size,
-.container .card-green .contentBx .size {
+.container .card-green .contentBx .size,
+.container .card-blue .contentBx .size {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 20px;
-  transition: 0.5s;
+  /* padding: 8px 10px; */
 }
 
 .container .card .contentBx .size h3,
-.container .card-green .contentBx .size h3 {
+.container .card-green .contentBx .size h3,
+.container .card-blue .contentBx .size h3 {
   color: #fff;
   font-weight: 300;
   font-size: 14px;
@@ -148,7 +172,8 @@ h1 {
 }
 
 .container .card .contentBx .size span,
-.container .card-green .contentBx .size span {
+.container .card-green .contentBx .size span,
+.container .card-blue .contentBx .size span {
   width: 1.5rem;
   height: 1.6rem;
   text-align: center;
@@ -163,22 +188,27 @@ h1 {
   cursor: pointer;
 }
 
-.container .card .contentBx .size span:hover {
+.container .card .contentBx span:hover {
   background: #db3f35;
 }
 
-.container .card-green .contentBx .size span:hover {
+.container .card-green .contentBx span:hover {
   background: #5bddc2;
 }
 
+.container .card-blue .contentBx span:hover {
+  background: #073476;
+}
+
 .container .card .contentBx .link,
-.container .card-green .contentBx .link {
+.container .card-green .contentBx .link,
+.container .card-blue .contentBx .link {
   position: relative;
   background: #fff;
   border-radius: 2px;
   width: 30%;
   left: 55%;
-  top: 1rem;
+  top: 2rem;
   font-size: small;
   text-decoration: none;
   transition: none;
@@ -187,13 +217,22 @@ h1 {
 a {
   text-decoration: none;
 }
-a:link {
+
+a:visited {
   color: #111;
 }
+
+a:active {
+  color: white;
+}
 .container .card .contentBx .link:hover {
-  background-color: #db3f35;
+  background: #db3f35;
 }
 
 .container .card-green .contentBx .link:hover {
-  background-color: #5bddc2;
+  background: #5bddc2;
+}
+
+.container .card-blue .contentBx .link:hover {
+  background: #073476;
 }
