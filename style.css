@@ -67,7 +67,7 @@ h1 {
 }
 
 .container .card-blue:before {
-  background: #073476;
+  background: #073376;
 }
 
 .container .card:hover:before,
@@ -190,15 +190,18 @@ h1 {
   cursor: pointer;
 }
 
-.container .card .contentBx span:hover {
+.container .card .contentBx span:hover,
+.container .card .contentBx .link:hover {
   background: #db3f35;
 }
 
-.container .card-green .contentBx span:hover {
+.container .card-green .contentBx span:hover,
+.container .card-green .contentBx .link:hover {
   background: #5bddc2;
 }
 
-.container .card-blue .contentBx span:hover {
+.container .card-blue .contentBx span:hover,
+.container .card-blue .contentBx .link:hover {
   background: #073476;
 }
 
@@ -227,14 +230,15 @@ a:visited {
 a:active {
   color: white;
 }
-.container .card .contentBx .link:hover {
+/* .container .card .contentBx .link:hover {
   background: #db3f35;
-}
+} */
 
-.container .card-green .contentBx .link:hover {
+/* .container .card-green .contentBx .link:hover {
   background: #5bddc2;
-}
+} */
 
-.container .card-blue .contentBx .link:hover {
+/* .container .card-blue .contentBx .link:hover {
   background: #073476;
 }
+ */
