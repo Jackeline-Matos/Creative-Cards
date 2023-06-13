@@ -42,9 +42,6 @@
   width: 300px;
 }
 
-.box img:hover {
-}
-
 .bookBanner:hover {
   border-radius: 1rem;
   height: 350px;
