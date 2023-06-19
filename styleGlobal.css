@@ -59,14 +59,14 @@ body {
   background: blueviolet;
 }
 
-@media (max-width: 895px) {
+@media (min-width: 576px) and (max-width: 895px) {
   .carouselNav {
-    bottom: -25rem;
+    bottom: -31rem;
   }
 }
 
 @media (max-width: 575px) {
   .carouselNav {
-    bottom: -36rem;
+    bottom: -60rem;
   }
 }
